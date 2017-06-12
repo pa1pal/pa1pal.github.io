@@ -129,7 +129,7 @@ dt, dd {
     width: 70%; }
 
   .education dt, .education dd {
-    width: 100%; } }
+    width: 50%; } }
 .title {
   margin: 0;
   font-weight: bold;
