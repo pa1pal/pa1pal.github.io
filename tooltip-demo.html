@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip Demo - Mobile Optimized</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .demo-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .demo-button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .demo-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        .demo-button:active {
+            transform: translateY(0);
+        }
+
+        /* Tooltip Container */
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 60px;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            background: linear-gradient(135deg, #0b7dda 0%, #0a5fa3 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(11, 125, 218, 0.4);
+            width: 320px;
+            max-width: 90vw;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+
+        .tooltip.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Tooltip Arrow */
+        .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 30px;
+            border: 15px solid transparent;
+            border-top-color: #0a5fa3;
+            transform: translateX(-50%);
+        }
+
+        /* Tooltip Content */
+        .tooltip-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .tooltip-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #0b7dda;
+        }
+
+        .tooltip-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: #0b7dda;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .tooltip-text {
+            flex: 1;
+        }
+
+        .tooltip-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        .tooltip-subtitle {
+            font-size: 13px;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        .tooltip-button {
+            background: white;
+            color: #0b7dda;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            float: right;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .tooltip-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .tooltip-button:active {
+            transform: scale(0.98);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .tooltip {
+                width: 280px;
+            }
+
+            .tooltip-title {
+                font-size: 16px;
+            }
+
+            .tooltip-subtitle {
+                font-size: 12px;
+            }
+
+            .tooltip-icon {
+                width: 45px;
+                height: 45px;
+            }
+
+            .tooltip-icon svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .tooltip {
+                width: calc(100vw - 40px);
+                left: 50%;
+                transform: translateX(-50%) translateY(10px);
+            }
+
+            .tooltip.show {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            .tooltip::after {
+                left: 50%;
+            }
+        }
+
+        .info-text {
+            color: #999;
+            font-size: 12px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="demo-section">
+            <h1>Mobile Tooltip Demo</h1>
+            <p>Click the button below to see the tooltip in action</p>
+            
+            <div class="tooltip-container">
+                <button class="demo-button" onclick="toggleTooltip()">Show Tooltip</button>
+                
+                <div id="tooltip" class="tooltip">
+                    <div class="tooltip-content">
+                        <div class="tooltip-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                                <path d="M12 6v6l4 2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 3.5c-1.5.5-2.8 1.4-3.8 2.6M3.5 9c-.5 1.5-.5 3.1 0 4.6M9 20.5c1.5.5 3.1.5 4.6 0M20.5 15c.5-1.5.5-3.1 0-4.6" stroke-linecap="round" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <div class="tooltip-text">
+                            <div class="tooltip-title">Save on every bill payment!</div>
+                            <div class="tooltip-subtitle">Mobile, electric bill recharge, etc</div>
+                        </div>
+                    </div>
+                    <button class="tooltip-button" onclick="closeTooltip()">Okay</button>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+
+            <p class="info-text">Responsive design optimized for mobile screens</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleTooltip() {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.classList.toggle('show');
+        }
+
+        function closeTooltip() {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.classList.remove('show');
+        }
+
+        // Close tooltip when clicking outside
+        document.addEventListener('click', function(event) {
+            const tooltip = document.getElementById('tooltip');
+            const button = document.querySelector('.demo-button');
+            
+            if (!tooltip.contains(event.target) && event.target !== button) {
+                tooltip.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
