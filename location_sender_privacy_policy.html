@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Location Sender</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #22c55e;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #22c55e;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: #1f2937;
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        h3 {
+            color: #374151;
+            font-size: 1.3rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            color: #4b5563;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #4b5563;
+        }
+
+        strong {
+            color: #1f2937;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #4b5563;
+        }
+
+        a {
+            color: #22c55e;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .last-updated {
+            font-weight: bold;
+            color: #6b7280;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .highlight {
+            background-color: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .no-collect {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .no-collect::before {
+            content: "❌";
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .code-block {
+            background-color: #1f2937;
+            color: #d1d5db;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .summary-box {
+            background-color: #f0fdf4;
+            border: 2px solid #22c55e;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .summary-box h2 {
+            margin-top: 0;
+            border-bottom: none;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy for Location Sender</h1>
+        <p class="last-updated"><strong>Last Updated:</strong> February 2, 2025</p>
+
+        <h2>Introduction</h2>
+        <p>Location Sender ("the App") is committed to protecting your privacy. This Privacy Policy explains how we handle data in the App.</p>
+
+        <h2>Data Collection</h2>
+        <div class="highlight">
+            <p><strong>Location Sender does NOT collect, store, transmit, or share any personal data with third parties, remote servers, or analytics services.</strong></p>
+        </div>
+
+        <h3>What We Access</h3>
+        <p>The App requires the following permissions to function:</p>
+
+        <h4>READ_CALL_LOG Permission</h4>
+        <ul>
+            <li><strong>Purpose:</strong> To display your recent phone calls within the App</li>
+            <li><strong>Usage:</strong> Call log data is read from your device and displayed in the App interface</li>
+            <li><strong>Storage:</strong> All call log data remains on your device and is never uploaded anywhere</li>
+            <li><strong>Sharing:</strong> Call log data is never shared with any third parties</li>
+        </ul>
+
+        <h3>What We Store Locally</h3>
+        <p>The App stores the following data <strong>locally on your device only</strong>:</p>
+
+        <ol>
+            <li>
+                <strong>Saved Locations</strong>
+                <ul>
+                    <li>Location names you create</li>
+                    <li>Place names from Google Maps</li>
+                    <li>Addresses and coordinates</li>
+                    <li>Google Maps links</li>
+                    <li><strong>Storage:</strong> Stored in local SQLite database</li>
+                    <li><strong>Access:</strong> Only accessible by the App on your device</li>
+                    <li><strong>Deletion:</strong> Deleted when you uninstall the App</li>
+                </ul>
+            </li>
+            <li>
+                <strong>App Preferences</strong>
+                <ul>
+                    <li>Number of recent calls to display (10, 20, or 50)</li>
+                    <li><strong>Storage:</strong> Stored in Android DataStore on your device</li>
+                    <li><strong>Deletion:</strong> Deleted when you uninstall the App</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>What We DON'T Collect</h3>
+        <div class="no-collect">No personal identifiable information</div>
+        <div class="no-collect">No contact details or phone numbers</div>
+        <div class="no-collect">No location tracking or GPS data</div>
+        <div class="no-collect">No analytics or usage statistics</div>
+        <div class="no-collect">No advertising identifiers</div>
+        <div class="no-collect">No crash reports or diagnostics</div>
+        <div class="no-collect">No cookies or tracking technologies</div>
+        <div class="no-collect">No account creation or login required</div>
+
+        <h2>Third-Party Services</h2>
+        <p>The App integrates with the following third-party services, but does NOT send your data to them:</p>
+
+        <h3>WhatsApp</h3>
+        <ul>
+            <li><strong>Integration:</strong> When you tap "WhatsApp" button, the App opens WhatsApp using public intents</li>
+            <li><strong>Data Sent:</strong> Only the phone number and optional pre-filled message (location link or "Hello")</li>
+            <li><strong>Control:</strong> You control what is sent when you tap "Send" in WhatsApp</li>
+            <li><strong>Privacy:</strong> Refer to <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank">WhatsApp Privacy Policy</a></li>
+        </ul>
+
+        <h3>Google Maps</h3>
+        <ul>
+            <li><strong>Integration:</strong> When you save or share locations, the App creates Google Maps links</li>
+            <li><strong>Data Sent:</strong> Only when you manually click to open Maps or share a location</li>
+            <li><strong>Control:</strong> You control when Maps is opened</li>
+            <li><strong>Privacy:</strong> Refer to <a href="https://policies.google.com/privacy" target="_blank">Google Maps Privacy Policy</a></li>
+        </ul>
+
+        <h2>Data Security</h2>
+        <ul>
+            <li>All data is stored locally on your device using Android's secure storage mechanisms</li>
+            <li>No data transmission to external servers</li>
+            <li>No cloud sync or backup</li>
+            <li>Data is protected by your device's security (PIN, pattern, biometric)</li>
+        </ul>
+
+        <h2>Your Rights</h2>
+
+        <h3>Access</h3>
+        <p>You can view all data stored by the App within the App interface.</p>
+
+        <h3>Delete</h3>
+        <p>You can delete saved locations individually within the App.</p>
+
+        <h3>Revoke Permissions</h3>
+        <p>You can revoke call log permission at any time:</p>
+        <ul>
+            <li>Android Settings → Apps → Location Sender → Permissions → Call logs → Don't allow</li>
+        </ul>
+        <p>Revoking permission will prevent the App from displaying recent calls but won't affect saved locations.</p>
+
+        <h3>Complete Data Deletion</h3>
+        <p>Uninstalling the App completely removes all stored data.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>The App does not knowingly collect any information from children. The App is rated for general audiences and does not have age restrictions.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted:</p>
+        <ul>
+            <li>In the App (if major changes occur)</li>
+            <li>On this page with updated "Last Updated" date</li>
+            <li>In the Google Play Store listing</li>
+        </ul>
+        <p>Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+        <h2>Open Source</h2>
+        <p>Location Sender is committed to transparency. The source code may be made available for review to verify privacy claims.</p>
+
+        <h2>Contact</h2>
+        <p>If you have questions about this Privacy Policy or the App's privacy practices, please contact:</p>
+        <ul>
+            <li><strong>Email:</strong> [Your Email Address]</li>
+            <li><strong>GitHub:</strong> [Your GitHub Repository URL]</li>
+        </ul>
+
+        <h2>Compliance</h2>
+        <p>This App complies with:</p>
+        <ul>
+            <li>Google Play Store policies</li>
+            <li>Android privacy best practices</li>
+            <li>GDPR (General Data Protection Regulation) principles</li>
+            <li>CCPA (California Consumer Privacy Act) principles</li>
+        </ul>
+
+        <div class="summary-box">
+            <h2>Summary</h2>
+            <p><strong>In Plain English:</strong></p>
+            <ul>
+                <li>We don't collect your data</li>
+                <li>We don't track you</li>
+                <li>We don't sell anything</li>
+                <li>Everything stays on your phone</li>
+                <li>You're in complete control</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>Technical Details</h2>
+
+        <h3>Permissions Breakdown</h3>
+        <div class="code-block">&lt;uses-permission android:name="android.permission.READ_CALL_LOG" /&gt;</div>
+        <p><strong>READ_CALL_LOG:</strong></p>
+        <ul>
+            <li>Required for displaying recent calls</li>
+            <li>Runtime permission (you must grant it)</li>
+            <li>Can be revoked anytime in Android settings</li>
+        </ul>
+
+        <h3>Data Storage</h3>
+        <p><strong>SQLite Database (Room):</strong></p>
+        <ul>
+            <li>Location: <code>/data/data/pawan.whatsappopener/databases/</code></li>
+            <li>Content: Saved locations only</li>
+            <li>Encryption: Android's default app data protection</li>
+            <li>Backup: Not included in cloud backups</li>
+        </ul>
+
+        <p><strong>DataStore Preferences:</strong></p>
+        <ul>
+            <li>Location: <code>/data/data/pawan.whatsappopener/datastore/</code></li>
+            <li>Content: App settings (call count preference)</li>
+            <li>Encryption: Android's default app data protection</li>
+        </ul>
+
+        <h3>Network Activity</h3>
+        <p>The App has <strong>ZERO</strong> network activity:</p>
+        <ul>
+            <li>No internet permission declared</li>
+            <li>No network requests made</li>
+            <li>No data uploaded or downloaded</li>
+            <li>Works completely offline</li>
+        </ul>
+
+        <h3>Third-Party Libraries</h3>
+        <p>The App uses standard Android libraries:</p>
+        <ul>
+            <li>AndroidX (Google's Android support libraries)</li>
+            <li>Room Database (local storage)</li>
+            <li>DataStore (local preferences)</li>
+            <li>Jetpack Compose (UI framework)</li>
+        </ul>
+        <p><strong>None of these libraries collect or transmit data.</strong></p>
+
+        <hr>
+
+        <h2>Verification</h2>
+        <p>You can verify these privacy claims by:</p>
+        <ol>
+            <li>
+                <strong>Checking Network Activity:</strong>
+                <ul>
+                    <li>Use network monitoring tools (e.g., NetGuard, PCAPdroid)</li>
+                    <li>The App makes zero network requests</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Reviewing Permissions:</strong>
+                <ul>
+                    <li>Android Settings → Apps → Location Sender → Permissions</li>
+                    <li>Only READ_CALL_LOG is requested</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Inspecting Source Code:</strong>
+                <ul>
+                    <li>[GitHub Repository URL] (if open source)</li>
+                    <li>Review code for data collection</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Using Android's Privacy Dashboard:</strong>
+                <ul>
+                    <li>Android 12+ Settings → Privacy → Privacy Dashboard</li>
+                    <li>Shows when READ_CALL_LOG is accessed</li>
+                </ul>
+            </li>
+        </ol>
+
+        <hr>
+
+        <p><strong>Questions or Concerns?</strong></p>
+        <p>We take privacy seriously. If you have any questions or concerns about how the App handles your data, please don't hesitate to contact us.</p>
+        <p><strong>Your privacy is our priority. Always.</strong></p>
+
+        <hr>
+
+        <p style="font-style: italic; color: #6b7280; text-align: center;">
+            This privacy policy is effective as of February 2, 2025 and applies to version 1.0.0 and later of Location Sender.
+        </p>
+    </div>
+</body>
+</html>
